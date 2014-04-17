@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>The Dhaka Times</title>     
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-1.6.4.js"></script>
+    <script src="online.js"></script>
+     <script> 
+          var notification;
+          var redirect;
+
+          window.onLineHandler = function(){
+            
+             redirect = setTimeout(function(){window.location = "http://m.dhakatimes.com.bd";},4000);
+            };
+
+          window.offLineHandler = function (){
+          // alert('No internet connection');
+          notification = setTimeout(function(){alert("No internet connection!")},5000);
+           };
+
+        window.onload = function() {
+        $('#exit-notification').fadeIn(600).delay(2000).fadeOut(800);
+        }
+        
+    </script>
+   
+</head>
+
+<body>
+    <div class="loading">
+      <img src="logo.png">
+      <img class="loading-text" src="loading.gif">
+    </div>
+
+    <div id="exit-notification" style="display:none">
+      <p>Click Exit button twice to close app!</p>
+    </div>
+
+</body>
+
+</html>
