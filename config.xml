@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.arcom.dhakatimesapp"
-        version   = "2.0.1.1">
+        version   = "2.0.1.2">
 
     <name>DhakaTimes</name>
 
@@ -36,7 +36,7 @@
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-
+    <preference name="StatusBarOverlaysWebView"   value="false" />             <!-- ios : show/hide the statusbar in ios7, statusbar plugin -->
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
@@ -65,6 +65,27 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 
+    <!-- Plugin -->
+        
+        <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+        
+    <!-- Plugin -->
+    
+    <!-- iOS statusbar hide at startup --> 
+    
+    <gap:config-file platform="ios" parent="UIStatusBarHidden">
+    <true/>
+    </gap:config-file>
+
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+    <false/>
+    </gap:config-file>
+    
+        <feature name="StatusBar">
+            <param name="ios-package" value="CDVStatusBar" onload="true" />
+        </feature>
+    <!-- iOS statusbar hide at startup --> 
+    
     <!--
         Define access to external domains.
 
