@@ -6,7 +6,7 @@
         id        = "com.arcom.dhakatimesapp"
         version   = "2.0">
 
-    <name>The Dhaka Times</name>
+    <name>DhakaTimes</name>
 
     <description>
         App for The Dhaka Times (www.dhakatimes.com.bd)
