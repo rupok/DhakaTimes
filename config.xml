@@ -71,10 +71,10 @@
         
     <!-- Plugin -->
     
-    <!-- iOS statusbar hide at startup --> 
+    <!-- iOS statusbar hide at startup 
     
     <gap:config-file platform="ios" parent="UIStatusBarHidden">
-    <true/>
+    <false/>
     </gap:config-file>
 
     <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
@@ -84,7 +84,7 @@
         <feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
         </feature>
-    <!-- iOS statusbar hide at startup --> 
+ iOS statusbar hide at startup --> 
     
     <!--
         Define access to external domains.
