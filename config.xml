@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.arcom.dhakatimesapp"
-        version   = "2.0.1.3">
+        version   = "2.0.1.0">
 
     <name>DhakaTimes</name>
 
@@ -71,21 +71,7 @@
         
     <!-- Plugin -->
     
-    <!-- iOS statusbar hide at startup 
-    
-    <gap:config-file platform="ios" parent="UIStatusBarHidden">
-    <false/>
-    </gap:config-file>
 
-    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
-    <false/>
-    </gap:config-file>
-    
-        <feature name="StatusBar">
-            <param name="ios-package" value="CDVStatusBar" onload="true" />
-        </feature>
- iOS statusbar hide at startup --> 
-    
     <!--
         Define access to external domains.
 
